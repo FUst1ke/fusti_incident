@@ -32,7 +32,7 @@ RegisterServerEvent('fusti_incident:sendData')
 AddEventHandler('fusti_incident:sendData', function(title, description)
     local xPlayer = ESX.GetPlayerFromId(source)
     local name = xPlayer.getName()
-    local job = xPlayer.getJob()
+    local job = xPlayer.getJob().name
     local grade = xPlayer.getJob().grade_label
     if job == 'police' then
         SendWebHook(webhook, title, description, name, grade)
