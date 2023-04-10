@@ -1,6 +1,6 @@
 ESX = exports.es_extended:getSharedObject()
 
-local webhook = 'https://discord.com/api/webhooks/1094946677250600970/tNNRfmJmrfOCHxsYfywAbQIUFcnBkDySp5Y8YYZKgSeg-xxpSfCeDdd9X1leN58DKk-N'
+local webhook = '' -- dont forget to set the webhook!
 function SendWebHook(webhook, title, description, name, grade)
     PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({
         embeds = {{
