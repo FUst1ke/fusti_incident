@@ -12,7 +12,7 @@ function SendWebHook(webhook, title, description, name, grade)
             ["title"] = "New incident recorded!",
             ["description"] = "**Title:** \n" ..title.. "\n**Description:** \n" ..description,
             ["color"] = 0x4886e3,
-            ["timestamp"] = "2023-04-10T11:24:09.813Z",
+            ["timestamp"] = os.date('!%Y-%m-%dT%H:%M:%S'),
             ["footer"] = {
                 ["text"] = "Los Santos Police Department",
                 ["icon_url"] = "https://prod.cloud.rockstargames.com/crews/sc/0291/19566919/publish/emblem/emblem_512.png",
