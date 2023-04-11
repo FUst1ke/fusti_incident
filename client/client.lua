@@ -10,6 +10,7 @@ local function openMenu()
     local input = lib.inputDialog('Record a new incident', {'Title', 'Description'})
     if not input then DeleteEntity(item) ClearPedTasksImmediately(player) return end
     TriggerServerEvent('fusti_incident:sendData', input[1], input[2])
+    lib.notify({title = 'Information', description = 'Data successfully recorded.', type = 'success'})
     ClearPedTasksImmediately(player)
     DetachEntity(item, true, true)
     DeleteEntity(item)
